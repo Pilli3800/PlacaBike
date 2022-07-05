@@ -25,23 +25,36 @@ function Navbar() {
         </button>
         <ul className={`nav-menu ${toggleClassCheck}`}>
           <li className="nav-menu-item">
-            <Link to="/" className="nav-menu-link nav-link">
+            <Link
+              to="/"
+              onClick={handleClick}
+              className="nav-menu-link nav-link"
+            >
               Inicio
             </Link>
           </li>
           <li className="nav-menu-item">
-            <Link to="/sobrenosotros" className="nav-menu-link nav-link">
+            <Link
+              to="/sobrenosotros"
+              onClick={handleClick}
+              className="nav-menu-link nav-link"
+            >
               Sobre Nosotros
             </Link>
           </li>
           <li className="nav-menu-item">
-            <Link to="/contacto" className="nav-menu-link nav-link">
+            <Link
+              to="/contacto"
+              onClick={handleClick}
+              className="nav-menu-link nav-link"
+            >
               Contacto
             </Link>
           </li>
           <li className="nav-menu-item">
             <Link
               to="/ingresar"
+              onClick={handleClick}
               className="nav-menu-link nav-link nav-menu-link_active"
             >
               Ingresar
