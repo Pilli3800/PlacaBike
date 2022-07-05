@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import "./Inicio.css";
 
-const Inicio = () =>{
+const Inicio = () => {
   return (
-    <div>
-      <h3>Inicio</h3>
-    </div>
+    <main>
+      <section className="section-hero">
+        <h1>Inicio</h1>
+      </section>
+    </main>
   );
-}
+};
 export default Inicio;

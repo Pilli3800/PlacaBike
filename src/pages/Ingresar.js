@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import "./Ingresar.css";
 
-const Ingresar = () =>{
+const Ingresar = () => {
   return (
     <div>
-      <h3>Ingresar</h3>
+      <h1>Ingresar</h1>
     </div>
   );
-}
+};
 export default Ingresar;
