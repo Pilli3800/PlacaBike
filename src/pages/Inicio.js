@@ -1,7 +1,6 @@
 import React from "react";
 import "./Inicio.css";
 import bicycle from "../resources/img/bicycle.png";
-import chains from "../resources/img/chains.png";
 
 const Inicio = () => {
   return (
