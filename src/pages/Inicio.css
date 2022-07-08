@@ -1,7 +1,29 @@
 .section-hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   height: 70vh;
-  background-color: var(--color-focus);
+  background-color: var(--color-primary);
+}
+
+.hero-container{
+  width: 30%;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 4vh;
+}
+
+.whiteSpan{
+  font-weight: bold;
+}
+
+.darkSpan{
+  color: var(--color-focus);
+  font-weight: bold;
 }
