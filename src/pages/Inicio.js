@@ -26,14 +26,9 @@ const Inicio = () => {
       </section>
       <section className="section-cards">
         <div className="cards-container">
-          <div className="cards-container-img">
-            <img className="chains" src={chains} alt="chains"></img>
-          </div>
-          <div className="cards-container-card">
             <div className="card"></div>
             <div className="card"></div>
             <div className="card"></div>
-          </div>
         </div>
       </section>
     </main>
