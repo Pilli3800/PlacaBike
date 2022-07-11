@@ -1,7 +1,9 @@
 /* Section Hero */
 .section-hero {
   background-color: var(--color-primary);
-  height: 70vh;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-container {

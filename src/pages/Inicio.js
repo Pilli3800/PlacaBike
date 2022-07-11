@@ -25,6 +25,8 @@ const Inicio = () => {
             <img className="bicycle" src={bicycle} alt="bicycle"></img>
           </div>
         </div>
+        <div>
+        </div>
       </section>
       <section className="section-cards">
         <div className="cards-container">
