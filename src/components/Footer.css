@@ -1,0 +1,23 @@
+footer {
+  background-color: var(--color-background);
+  height: 80px;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+.footer-p1 {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.footer-p2 {
+    font-weight: 400;
+    font-size: 1em;
+  }
