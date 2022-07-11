@@ -54,12 +54,13 @@
 /* Section Cards */
 
 .section-cards {
-  height: 40vh;
+  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url('../resources/img/chains.png');
+  background-image: url("../resources/img/chains.png");
+  background-color: #f9f9f9;
   background-repeat: no-repeat;
 }
 
@@ -80,11 +81,35 @@
   box-shadow: 0.3em 0.3em 0.7em #00000015;
   transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: rgb(250, 250, 250) 0.2em solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card:hover {
   box-shadow: 0 8px 50px #23232333;
-  transition: 1s;
+  transition: 0.5s ease;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.5s ease;
+  padding: 20px;
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.card-img {
+  width: 6rem;
+  margin-bottom: 1rem;
 }
 
 /* Animaciones */
@@ -111,6 +136,13 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@media (max-width: 1200px) {
+  /* Section Cards */
+.cards-container{
+  margin-left: 0;
+}
 }
 
 @media (max-width: 992px) {
@@ -141,6 +173,7 @@
     height: auto;
     flex-direction: column;
     padding: 40px 0;
+    background-image: none;
   }
 
   .cards-container {

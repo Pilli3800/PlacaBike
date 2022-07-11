@@ -1,6 +1,9 @@
 import React from "react";
 import "./Inicio.css";
 import bicycle from "../resources/img/bicycle.png";
+import register from "../resources/img/register.png";
+import cogwheel from "../resources/img/cogwheel.png";
+import licenseplate from "../resources/img/licenseplate.png";
 
 const Inicio = () => {
   return (
@@ -25,9 +28,34 @@ const Inicio = () => {
       </section>
       <section className="section-cards">
         <div className="cards-container">
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
+          <div className="card">
+            <div className="card-container">
+              <img className="card-img" src={register} alt="registrate"></img>
+              <p>
+                <strong> #1 Registrate</strong> en nuestra plataforma
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-container">
+              <img className="card-img" src={cogwheel} alt="registrate"></img>
+              <p>
+                <strong> #2 Registra</strong> tus bicicletas con sus datos
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-container">
+              <img
+                className="card-img"
+                src={licenseplate}
+                alt="registrate"
+              ></img>
+              <p>
+                <strong> #3 Genera</strong> tu tarjeta de propiedad y placa
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
