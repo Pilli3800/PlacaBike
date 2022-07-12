@@ -1,0 +1,16 @@
+.sobrenosotros-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1 {
+  background-color: var(--color-primary);
+  height: 20vh;
+}
+
+.titleSection {
+  font-size: 3rem;
+  color: white;
+}
+

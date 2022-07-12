@@ -4,8 +4,11 @@ import bicycle from "../resources/img/bicycle.png";
 import register from "../resources/img/register.png";
 import cogwheel from "../resources/img/cogwheel.png";
 import licenseplate from "../resources/img/licenseplate.png";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const Inicio = () => {
+  AOS.init();
   return (
     <main>
       <section className="section-hero">
@@ -29,7 +32,7 @@ const Inicio = () => {
         </div>
       </section>
       <section className="section-cards">
-        <div className="cards-container">
+        <div className="cards-container" data-aos="fade-up">
           <div className="card">
             <div className="card-container">
               <img className="card-img" src={register} alt="registrate"></img>
