@@ -1,0 +1,81 @@
+
+.profile{
+  
+    min-width: 20rem;
+    height:90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 5rem;
+
+
+}
+
+.profile-face{
+    width: 15rem;
+    border-radius: 50%;
+    margin-top:2rem;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7));
+   
+
+}
+
+.profile-bike{
+    position: relative;
+    margin: -6rem;
+    width: 15rem;    
+    
+}
+.profile-bikewithoutwheels{
+   
+    z-index: 10;
+    margin: -6rem;
+    width: 15rem;    
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+}
+.ruedas{
+     
+    gap: 2rem;
+    width: 15rem;
+    height: 4rem;
+    margin-top: -2.2rem;
+    
+}
+.profile-wheel{
+    width:7rem;
+    position: absolute;
+    animation: rodar 1.5s infinite linear;
+    filter: drop-shadow(0 0 50px rgba(0, 0, 0, 1));
+}
+.wheel1{
+    right: 0.5rem;
+    position: relative;
+    
+}
+.wheel2{
+    left: 1.5rem;
+    position: relative;
+    
+}
+
+.info{
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 10px 10px rgba(255,255,255,0.5);
+    height: fit-content;
+    width: 25rem;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 10rem;
+}
+
+@keyframes rodar {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+

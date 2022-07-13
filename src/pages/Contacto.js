@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Review from '../components/Review';
 const Contacto = () =>{
   return (
     <div>
-      <h3>Contacto</h3>
+      <Review/>
     </div>
   );
 }
