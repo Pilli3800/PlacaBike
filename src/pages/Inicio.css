@@ -1,7 +1,7 @@
 /* Section Hero */
 .section-hero {
   background-color: var(--color-primary);
-  height: 50vh;
+  height: 93vh;
   display: flex;
   justify-content: center;
 }
@@ -117,32 +117,36 @@
 /* Section Sobre Nosotros */
 
 .section-sobrenosotros {
+  height: 50vh;
+  background-color: var(--color-primary);
+  background-image: url("../resources/img/gear.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-color: var(--color-primary);
-  min-height: 45vh;
-  position: relative;
-  
 }
 
+.sobrenosotros-container-inicio {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 50%;
+  margin-right: 30%;
+}
 
-.titleSection {
-  font-size: 3rem;
+.sobrenosotros-title {
+  font-size: 2.3em;
   color: white;
 }
 
-.infoSection{
+.sobrenosotros-text {
+  font-size: 1.5em;
   color: white;
-  font-size: 1.2rem;
-  text-align:justify;
-  margin: 1% 20%;
-  line-height: 25px;
-  font-weight: 500;
- 
+  font-weight: 400;
 }
-
 
 /* Section Carrusel */
 
@@ -154,9 +158,7 @@
   background-color: #f9f9f9;
   min-height: 45vh;
   position: relative;
-  
 }
-
 
 /* Animaciones */
 
@@ -186,9 +188,13 @@
 
 @media (max-width: 1200px) {
   /* Section Cards */
-.cards-container{
-  margin-left: 0;
-}
+  .cards-container {
+    margin-left: 0;
+  }
+  /* Section Sobre Nosotros */
+  .section-sobrenosotros {
+    background-size: 40vh;
+  }
 }
 
 @media (max-width: 992px) {
@@ -227,6 +233,20 @@
     gap: 50px;
     margin-left: 0;
   }
+
+  /* Section Sobre Nosotros */
+  .section-sobrenosotros {
+    background-size: 35vh;
+  }
+  .sobrenosotros-container-inicio {
+    margin-right: 40%;
+  }
+  .sobrenosotros-title{
+    font-size: 1.9rem;
+  }
+  .sobrenosotros-text{
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -239,34 +259,42 @@
     line-height: 23px;
     font-size: 14px;
   }
-}
 
-@media (max-width: 768px) {
-  .section-sobrenosotros{
-    
-    margin-left: 0;
-    height: auto;
-    
-    
-  }
   /* Section Sobre Nosotros */
-  .titleSection {
+  .section-sobrenosotros {
+    background-image: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobrenosotros-container-inicio {
+    width: 100%;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto 60px;
+  }
+
+  .sobrenosotros-title {
     font-size: 2rem;
   }
-  .infoSection{
-    font-size: 1rem;
-    line-height: 20px;
+  .sobrenosotros-text {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 576px) {
   /* Section Sobre Nosotros */
-  .titleSection {
-    font-size: 2rem;
+  .section-sobrenosotros {
   }
-  .infoSection{
-    font-size: 0.6rem;
-    line-height: 10px;
-    margin: 1% 10%;
+
+  .sobrenosotros-title {
+    font-size: 1.5rem;
+  }
+
+  .sobrenosotros-text {
+    font-size: 1rem;
   }
 }
