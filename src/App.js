@@ -6,6 +6,8 @@ import Sobrenosotros from "./pages/Sobrenosotros";
 import Contacto from "./pages/Contacto";
 import Ingresar from "./pages/Ingresar";
 import SlideRoutes from "react-slide-routes";
+import Registro from "./pages/Registro";
+import Recuperar from "./pages/Recuperar";
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
         <Route path="/sobrenosotros" element={<Sobrenosotros />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/ingresar" element={<Ingresar />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/recuperar" element={<Recuperar />} />
       </SlideRoutes>
     </>
   );

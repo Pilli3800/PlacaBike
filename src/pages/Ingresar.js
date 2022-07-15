@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Ingresar.css";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 
 const Ingresar = () => {
   AOS.init();
@@ -51,11 +52,11 @@ const Ingresar = () => {
         <div className="login-form-helper">
           <p className="login-helper">
             ¿No estas registrado aún?{" "}
-            <span className="spanHelperDark">Registrate</span>
+            <span className="spanHelperDark"><Link to="/registro">Registrate</Link></span>
           </p>
           <p className="login-helper">
             ¿Olvidaste tu contraseña?{" "}
-            <span className="spanHelperDark">Recuperala</span>
+            <span className="spanHelperDark"><Link to="/recuperar">Recuperala</Link></span>
           </p>
         </div>
       </div>
