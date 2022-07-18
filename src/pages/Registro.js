@@ -51,7 +51,7 @@ const Registro = () => {
           <input
             className="register-input"
             type="text"
-            name="username"
+            name="dni"
             placeholder="Ingrese su DNI"
             defaultValue={dni}
             onChange={changeHandler}
