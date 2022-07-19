@@ -52,11 +52,11 @@ const Ingresar = () => {
         <div className="login-form-helper">
           <p className="login-helper">
             ¿No estas registrado aún?{" "}
-            <span className="spanHelperDark"><Link to="/registro">Registrate</Link></span>
+            <span className="spanHelperDark"><Link className="link" to="/registro">Registrate</Link></span>
           </p>
           <p className="login-helper">
             ¿Olvidaste tu contraseña?{" "}
-            <span className="spanHelperDark"><Link to="/recuperar">Recuperala</Link></span>
+            <span className="spanHelperDark"><Link className="link" to="/recuperar">Recuperala</Link></span>
           </p>
         </div>
       </div>

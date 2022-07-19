@@ -22,6 +22,15 @@ body {
   padding-top: 80px;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   body {
     padding-top: 60px;

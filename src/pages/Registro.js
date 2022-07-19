@@ -66,7 +66,7 @@ const Registro = () => {
         </form>
         <div className="register-form-helper">
           <span className="spanHelperDark">
-            <Link to="/ingresar">Atrás</Link>
+            <Link className="link" to="/ingresar">Atrás</Link>
           </span>
         </div>
       </div>
