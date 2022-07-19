@@ -13,7 +13,7 @@
   flex-wrap: wrap;
 }
 
-.contacto-text-container{
+.contacto-text-container {
   margin-right: 40px;
 }
 
@@ -25,13 +25,14 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border-radius: 10px;
 }
 
-.contacto-label{
+.contacto-label {
   font-weight: bold;
 }
 
-.contacto-input{
+.contacto-input {
   width: 20rem;
   height: 2rem;
   background-color: #f9f9f9;
@@ -42,7 +43,7 @@
   margin: 10px 0;
 }
 
-.contacto-textarea{
+.contacto-textarea {
   margin: 10px 0;
   width: 20rem;
   max-width: 20rem;
@@ -92,23 +93,119 @@
   transition: 0.5s ease;
 }
 
-.icon-social:hover{
+.icon-social:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
-@media (max) {
+@media (max-width: 932px) {
   .section-contacto-container {
-    height: 92vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    height: 93vh;
+    flex-direction: column;
+    margin: 20px 0;
   }
-  
+
   .contacto-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .contacto-form-container {
+    width: 400px;
+    height: 500px;
+    margin: 20px 0;
+  }
+
+  .contacto-text-container {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-contacto-container {
+    height: auto;
+  }
+
+  .contacto-text-container {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-contacto-container {
+    height: auto;
     align-items: center;
-    flex-wrap: wrap;
+  }
+
+  .contacto-container {
+    margin: auto;
+    align-items: center;
+  }
+
+  .contacto-text-container {
+    margin-right: 0px;
+  }
+
+  .contacto-form-container {
+    width: 300px;
+    height: 500px;
+    margin: 20px auto;
+  }
+
+  .contacto-form {
+    padding: 20px;
+  }
+
+  .contacto-label {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .contacto-input {
+    width: 15rem;
+    height: 2rem;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    border: 1px solid #c7c7c7;
+    margin: 10px 0;
+  }
+
+  .contacto-textarea {
+    margin: 10px 0;
+    width: 15rem;
+    max-width: 15rem;
+    height: 15rem;
+    max-height: 15rem;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    border: 1px solid #c7c7c7;
+  }
+
+  .contacto-submit {
+    width: 10rem;
+    height: 3rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    margin: 20px 20%;
+  }
+
+  .contacto-title {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 20px 0;
+  }
+
+  .contacto-txt {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0;
   }
 }
