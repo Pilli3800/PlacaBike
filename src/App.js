@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Navigate, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Inicio from "./pages/Inicio";
 import Sobrenosotros from "./pages/Sobrenosotros";
@@ -19,6 +19,7 @@ function App() {
         <Route path="/ingresar" element={<Ingresar />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/recuperar" element={<Recuperar />} />
+        <Route path="*" element={<Navigate replace to="/"/>}/>
       </SlideRoutes>
     </>
   );
