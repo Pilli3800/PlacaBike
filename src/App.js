@@ -8,6 +8,7 @@ import Ingresar from "./pages/Ingresar/Ingresar";
 import SlideRoutes from "react-slide-routes";
 import Registro from "./pages/Registro/Registro";
 import Recuperar from "./pages/Recuperar/Recuperar";
+import User from "./pages/User/User";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/ingresar" element={<Ingresar />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/recuperar" element={<Recuperar />} />
-        <Route path="/user" element={<h1>Usuario Logeado</h1>} />
+        <Route path="/user" element={<User/>} />
         <Route path="*" element={<Navigate replace to="/"/>}/>
       </SlideRoutes>
     </>
