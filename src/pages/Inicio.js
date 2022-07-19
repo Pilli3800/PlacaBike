@@ -26,9 +26,9 @@ const Inicio = () => {
               finibus dolor velit at quam.{" "}
             </p>
             <div className="cssbuttons-io-button-container">
-            <button className="cssbuttons-io-button">
+            <Link className="link" to="/ingresar"><button className="cssbuttons-io-button">
               {" "}
-              <Link className="link" to="/ingresar">Comenzar</Link>
+              Comenzar
               <div className="icon">
                 <svg
                   height="24"
@@ -44,6 +44,7 @@ const Inicio = () => {
                 </svg>
               </div>
             </button>
+            </Link>
             </div>
           </div>
           <div className="hero-container-img">

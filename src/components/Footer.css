@@ -1,11 +1,12 @@
 footer {
-  background-color: var(--color-background);
+  background-color: var(--color-complementary);
   height: 80px;
   width: 100%;
   z-index: 50;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .footer-container {

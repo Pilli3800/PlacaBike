@@ -119,7 +119,7 @@
 /* Section Cards */
 
 .section-cards {
-  height: 45vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,6 +127,8 @@
   background-image: url("../resources/img/chains.png");
   background-color: #f9f9f9;
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -0rem;
 }
 
 .cards-container {
@@ -181,7 +183,7 @@
 
 .section-sobrenosotros {
   height: 50vh;
-  background-color: var(--color-primary);
+  background-color: var(--color-complementary);
   background-image: url("../resources/img/gear.png");
   background-repeat: no-repeat;
   background-position: right;
