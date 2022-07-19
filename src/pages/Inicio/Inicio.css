@@ -124,7 +124,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url("../resources/img/chains.png");
+  background-image: url("../../resources/img/chains.png");
   background-color: #f9f9f9;
   background-repeat: no-repeat;
   background-size: contain;
@@ -184,7 +184,7 @@
 .section-sobrenosotros {
   height: 50vh;
   background-color: var(--color-complementary);
-  background-image: url("../resources/img/gear.png");
+  background-image: url("../../resources/img/gear.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;

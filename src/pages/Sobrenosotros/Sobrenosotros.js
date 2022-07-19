@@ -2,9 +2,9 @@ import React from "react";
 import "./Sobrenosotros.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import ciclistas from "../resources/img/ciclistas.png";
-import policia from "../resources/img/policia.png";
-import documentos from "../resources/img/documentos.png";
+import ciclistas from "../../resources/img/ciclistas.png";
+import policia from "../../resources/img/policia.png";
+import documentos from "../../resources/img/documentos.png";
 
 const Sobrenosotros = () => {
   AOS.init();

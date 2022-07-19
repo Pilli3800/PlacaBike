@@ -1,11 +1,11 @@
 import React from "react";
 import "./Inicio.css";
-import bicycle from "../resources/img/bicycle.png";
-import register from "../resources/img/register.png";
-import cogwheel from "../resources/img/cogwheel.png";
-import licenseplate from "../resources/img/licenseplate.png";
+import bicycle from "../../resources/img/bicycle.png";
+import register from "../../resources/img/register.png";
+import cogwheel from "../../resources/img/cogwheel.png";
+import licenseplate from "../../resources/img/licenseplate.png";
 import "aos/dist/aos.css";
-import Review from "../components/Review";
+import Review from "../../components/Review";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 
