@@ -20,6 +20,7 @@ const Ingresar = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(data);
+    localStorage.setItem("user", JSON.stringify(data));
   };
 
   return (
@@ -47,16 +48,29 @@ const Ingresar = () => {
             onChange={changeHandler}
           />
           <br />
-          <input type="submit" className="login-submit" name="submit" value="Ingresar" />
+          <input
+            type="submit"
+            className="login-submit"
+            name="submit"
+            value="Ingresar"
+          />
         </form>
         <div className="login-form-helper">
           <p className="login-helper">
             ¿No estas registrado aún?{" "}
-            <span className="spanHelperDark"><Link className="link" to="/registro">Registrate</Link></span>
+            <span className="spanHelperDark">
+              <Link className="link" to="/registro">
+                Registrate
+              </Link>
+            </span>
           </p>
           <p className="login-helper">
             ¿Olvidaste tu contraseña?{" "}
-            <span className="spanHelperDark"><Link className="link" to="/recuperar">Recuperala</Link></span>
+            <span className="spanHelperDark">
+              <Link className="link" to="/recuperar">
+                Recuperala
+              </Link>
+            </span>
           </p>
         </div>
       </div>

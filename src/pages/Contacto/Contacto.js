@@ -1,7 +1,9 @@
 import React from "react";
 import "./Contacto.css";
 import { useState } from "react";
+import AOS from "aos";
 const Contacto = () => {
+  AOS.init();
   const [data, setData] = useState({
     email: " ",
     message: " ",
@@ -21,7 +23,7 @@ const Contacto = () => {
   return (
     <div className="section-contacto-container">
       <div className="contacto-container">
-        <div className="contacto-text-container">
+        <div className="contacto-text-container" data-aos="fade-up">
           <h2 className="contacto-title">¿Quieres decirnos algo?</h2>
           <p className="contacto-txt">Te dejamos nuestras redes sociales: </p>
           <div className="contacto-icons-container">
@@ -30,7 +32,7 @@ const Contacto = () => {
             <i className="fa-brands fa-instagram icon-social"></i>
           </div>
         </div>
-        <div className="contacto-form-container">
+        <div className="contacto-form-container" data-aos="fade-down">
           <form className="contacto-form" onSubmit={submitHandler}>
             <label className="contacto-label">Correo</label>
             <br></br>
