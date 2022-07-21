@@ -22,9 +22,9 @@ function App() {
         <Route path="/ingresar" element={<Ingresar />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/recuperar" element={<Recuperar />} />
-        <Route path="/user" element={<User />}>
-          <Route path="/user/perfil" element={<Perfil/>}></Route>
-          <Route path="/user/bicicletas" element={<Bicicletas/>}></Route>
+        <Route path="/user/:username" element={<User />}>
+          <Route path="/user/:username/perfil" element={<Perfil/>}></Route>
+          <Route path="/user/:username/bicicletas" element={<Bicicletas/>}></Route>
         </Route>
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>

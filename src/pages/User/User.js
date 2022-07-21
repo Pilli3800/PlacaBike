@@ -5,9 +5,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 import { Container } from "@mui/system";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 
 const User = () => {
+  const { username } = useParams();
   return (
     <Container>
       <div className="user-container">
@@ -18,10 +19,10 @@ const User = () => {
                 Menú
               </Button>
               <Menu {...bindMenu(popupState)}>
-                <Link to="/user/perfil" className="link">
+                <Link to="/user/:username/perfil/" className="link">
                   <MenuItem onClick={popupState.close}>Mi Cuenta</MenuItem>
                 </Link>
-                <Link to="/user/bicicletas" className="link">
+                <Link to='/user/{username}/bicicletas' className="link">
                   <MenuItem onClick={popupState.close}>Mis Bicicletas</MenuItem>
                 </Link>
                 <Link to="/" className="link"><MenuItem onClick={popupState.close}>Cerrar Sesión</MenuItem>
@@ -30,6 +31,7 @@ const User = () => {
             </React.Fragment>
           )}
         </PopupState>
+        <h3>Bienvenido: {username}</h3>
         <Outlet />
       </div>
     </Container>
