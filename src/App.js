@@ -17,14 +17,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/sobrenosotros" element={<Sobrenosotros />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/ingresar" element={<Ingresar />} />
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/recuperar" element={<Recuperar />} />
-        <Route path="/user/:username" element={<User />}>
-          <Route path="/user/:username/perfil" element={<Perfil/>}></Route>
-          <Route path="/user/:username/bicicletas" element={<Bicicletas/>}></Route>
+        <Route path="sobrenosotros" element={<Sobrenosotros />} />
+        <Route path="contacto" element={<Contacto />} />
+        <Route path="ingresar" element={<Ingresar />} />
+        <Route path="registro" element={<Registro />} />
+        <Route path="recuperar" element={<Recuperar />} />
+        <Route path="user/:username" element={<User />}>
+          <Route path="perfil" element={<Perfil/>}></Route>
+          <Route path="bicicletas" element={<Bicicletas/>}></Route>
         </Route>
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>

@@ -19,10 +19,10 @@ const User = () => {
                 Menú
               </Button>
               <Menu {...bindMenu(popupState)}>
-                <Link to="/user/:username/perfil/" className="link">
+                <Link to="perfil" className="link">
                   <MenuItem onClick={popupState.close}>Mi Cuenta</MenuItem>
                 </Link>
-                <Link to='/user/{username}/bicicletas' className="link">
+                <Link to='bicicletas' className="link">
                   <MenuItem onClick={popupState.close}>Mis Bicicletas</MenuItem>
                 </Link>
                 <Link to="/" className="link"><MenuItem onClick={popupState.close}>Cerrar Sesión</MenuItem>
