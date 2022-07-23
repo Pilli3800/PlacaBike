@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Ingresar.css";
 import AOS from "aos";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getDataFromApi } from "../../services/Api";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { app } from "../../services/firebase";
 
 const Ingresar = () => {
   AOS.init();
+  let navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const getUsersList = async () => {
     const users = await getDataFromApi(
@@ -32,15 +35,29 @@ const Ingresar = () => {
   const { username, password } = data;
   let obj = false;
   const changeHandler = (e) => {
-    setData({ ...data, [e.target.name] : e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(data);
-    localStorage.setItem("user", JSON.stringify(data));
-    obj = users.find((element) => element.name === data.username);
-    console.log(obj);
+    const auth = getAuth(app);
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+     signInWithEmailAndPassword(auth, email, password)
+       .then((userCredential) => {
+         const user = userCredential.user;
+         console.log(user);
+          navigate(`/user/${user.email}`)
+       })
+       .catch((error) => {
+         const errorCode = error.code;
+         const errorMessage = error.message;
+       });
+    // console.log(data);
+    // localStorage.setItem("user", JSON.stringify(data));
+    // obj = users.find((element) => element.name === data.username);
+    // console.log(obj);
   };
 
   return (
@@ -55,8 +72,9 @@ const Ingresar = () => {
             type="text"
             name="username"
             placeholder="Ingrese su DNI"
-            value={username}
-            onChange={changeHandler}
+            id="email"
+            // value={username}
+            // onChange={changeHandler}
           />
           <br />
           <input
@@ -64,8 +82,9 @@ const Ingresar = () => {
             type="password"
             name="password"
             placeholder="Ingrese su contraseña"
-            value={password}
-            onChange={changeHandler}
+            id="password"
+            // value={password}
+            // onChange={changeHandler}
           />
           <br />
           <input
@@ -73,7 +92,6 @@ const Ingresar = () => {
             className="login-submit"
             name="submit"
             value="Ingresar"
-            onClick={submitHandler}
           />
         </form>
         <div className="login-form-helper">

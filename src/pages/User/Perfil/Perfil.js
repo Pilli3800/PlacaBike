@@ -1,8 +1,10 @@
 import React from 'react'
+import { Avatar } from '@mui/material'
+import "./Perfil.css";
 
 const Perfil = () => {
   return (
-    <div>Perfil</div>
+    <div className='hola'>Perfil<Avatar>{}</Avatar></div>
   )
 }
 

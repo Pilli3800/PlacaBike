@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "./Registro.css";
 import AOS from "aos";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { app } from "../../services/firebase";
+import axios from "axios";
 
 const Registro = () => {
   AOS.init();
-
+  let navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -18,9 +21,40 @@ const Registro = () => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(data);
+    const auth = getAuth(app);
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const dni = e.target.dni.value;
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        axios
+          .post("https://placabike-5f044-default-rtdb.firebaseio.com/usuarios.json", {
+            email: email,
+            password: password,
+            dni: dni
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        navigate("/ingresar", {
+          replace: true,
+        });
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert("Error al registrar");
+        // ..
+      });
+    console.log(email, password, dni);
   };
 
   return (
@@ -34,9 +68,10 @@ const Registro = () => {
             className="register-input"
             type="email"
             name="email"
+            id="email"
             placeholder="Ingrese su correo electrónico"
-            value={email}
-            onChange={changeHandler}
+            // value={email}
+            // onChange={changeHandler}
           />
           <br />
           <input
@@ -44,8 +79,9 @@ const Registro = () => {
             type="password"
             name="password"
             placeholder="Ingrese su contraseña"
-            value={password}
-            onChange={changeHandler}
+            id="password"
+            // value={password}
+            // onChange={changeHandler}
           />
           <br />
           <input
@@ -53,8 +89,9 @@ const Registro = () => {
             type="text"
             name="dni"
             placeholder="Ingrese su DNI"
-            defaultValue={dni}
-            onChange={changeHandler}
+            id="dni"
+            // defaultValue={dni}
+            // onChange={changeHandler}
           />
           <br />
           <input
@@ -66,7 +103,9 @@ const Registro = () => {
         </form>
         <div className="register-form-helper">
           <span className="spanHelperDark">
-            <Link className="link" to="/ingresar">Atrás</Link>
+            <Link className="link" to="/ingresar">
+              Atrás
+            </Link>
           </span>
         </div>
       </div>
