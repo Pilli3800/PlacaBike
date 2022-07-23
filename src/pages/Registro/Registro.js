@@ -15,7 +15,7 @@ const Registro = () => {
   const { email, password, dni } = data;
 
   const changeHandler = (e) => {
-    setData({ ...data, [e.target.name]: [e.target.value] });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
