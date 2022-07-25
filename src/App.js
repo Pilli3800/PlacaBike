@@ -7,9 +7,7 @@ import Contacto from "./pages/Contacto/Contacto";
 import Ingresar from "./pages/Ingresar/Ingresar";
 import Registro from "./pages/Registro/Registro";
 import Recuperar from "./pages/Recuperar/Recuperar";
-import User from "./pages/User/User";
-import Perfil from "./pages/User/Perfil/Perfil";
-import Bicicletas from "./pages/Bicicletas/Bicicletas";
+import {UserRoutes} from "./pages/User/routes/UserRoutes"
 
 function App() {
   return (
@@ -22,10 +20,7 @@ function App() {
         <Route path="ingresar" element={<Ingresar />} />
         <Route path="registro" element={<Registro />} />
         <Route path="recuperar" element={<Recuperar />} />
-        <Route path="user/:username" element={<User />}>
-          <Route path="perfil" element={<Perfil/>}></Route>
-          <Route path="bicicletas" element={<Bicicletas/>}></Route>
-        </Route>
+        <Route path="user/*" element={<UserRoutes/>}/>
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </>
