@@ -7,7 +7,7 @@ import Contacto from "./pages/Contacto/Contacto";
 import Ingresar from "./pages/Ingresar/Ingresar";
 import Registro from "./pages/Registro/Registro";
 import Recuperar from "./pages/Recuperar/Recuperar";
-import {UserRoutes} from "./pages/User/routes/UserRoutes"
+import { UserRoutes } from "./pages/User/routes/UserRoutes";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="ingresar" element={<Ingresar />} />
         <Route path="registro" element={<Registro />} />
         <Route path="recuperar" element={<Recuperar />} />
-        <Route path="user/*" element={<UserRoutes/>}/>
+        <Route path="user/*" element={<UserRoutes />} />
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </>

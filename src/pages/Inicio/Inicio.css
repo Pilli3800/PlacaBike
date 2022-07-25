@@ -1,7 +1,7 @@
 /* Section Hero */
 .section-hero {
   background-color: var(--color-primary);
-  height: 93vh;
+  height: 92vh;
   display: flex;
   justify-content: center;
 }
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1% 0;
+  padding: 5% 0;
   flex-wrap: wrap;
   position: relative;
 }
@@ -53,73 +53,10 @@
   animation: fadeIn-Right 1.5s;
 }
 
-.cssbuttons-io-button-container {
-  display: flex;
-  justify-content: center;
-  margin: 1.5rem;
-}
-
-.cssbuttons-io-button {
-  background: var(--color-secondary);
-  color: white;
-  font-family: inherit;
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 17px;
-  font-weight: 500;
-  border-radius: 0.9em;
-  border: none;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  box-shadow: inset 0 0 1.6em -0.6em var(--color-secondary);
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-}
-
-.cssbuttons-io-button:hover {
-  cursor: pointer;
-}
-
-.cssbuttons-io-button .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em var(--color-secondary);
-  right: 0.3em;
-  transition: all 0.3s;
-}
-
-.cssbuttons-io-button:hover .icon {
-  width: calc(100% - 0.6em);
-}
-
-.cssbuttons-io-button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: black;
-}
-
-.cssbuttons-io-button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons-io-button:active .icon {
-  transform: scale(0.95);
-}
-
 /* Section Cards */
 
 .section-cards {
-  height: 50vh;
+  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,8 +64,6 @@
   background-image: url("../../resources/img/chains.png");
   background-color: #f9f9f9;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: -0rem;
 }
 
 .cards-container {
@@ -179,53 +114,6 @@
   margin-bottom: 1rem;
 }
 
-/* Section Sobre Nosotros */
-
-.section-sobrenosotros {
-  height: 50vh;
-  background-color: var(--color-complementary);
-  background-image: url("../../resources/img/gear.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sobrenosotros-container-inicio {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  width: 50%;
-  margin-right: 30%;
-}
-
-.sobrenosotros-title {
-  font-size: 2.3em;
-  color: white;
-}
-
-.sobrenosotros-text {
-  font-size: 1.5em;
-  color: white;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-/* Section Carrusel */
-
-.section-carrusel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #f9f9f9;
-  min-height: 45vh;
-  position: relative;
-}
-
 /* Animaciones */
 
 @keyframes fadeIn-Right {
@@ -254,13 +142,9 @@
 
 @media (max-width: 1200px) {
   /* Section Cards */
-  .cards-container {
-    margin-left: 0;
-  }
-  /* Section Sobre Nosotros */
-  .section-sobrenosotros {
-    background-size: 40vh;
-  }
+.cards-container{
+  margin-left: 0;
+}
 }
 
 @media (max-width: 992px) {
@@ -277,7 +161,6 @@
     width: 100%;
     padding: 0 70px;
     margin: 0;
-    margin-right: 0;
   }
 
   .hero-container-img {
@@ -300,20 +183,6 @@
     gap: 50px;
     margin-left: 0;
   }
-
-  /* Section Sobre Nosotros */
-  .section-sobrenosotros {
-    background-size: 35vh;
-  }
-  .sobrenosotros-container-inicio {
-    margin-right: 40%;
-  }
-  .sobrenosotros-title {
-    font-size: 1.9rem;
-  }
-  .sobrenosotros-text {
-    font-size: 1.2rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -325,50 +194,5 @@
   .hero-container-text p {
     line-height: 23px;
     font-size: 14px;
-  }
-
-  /* Section Sobre Nosotros */
-  .section-sobrenosotros {
-    background-image: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .sobrenosotros-container-inicio {
-    width: 100%;
-    margin-right: 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto 60px;
-  }
-
-  .sobrenosotros-title {
-    font-size: 2rem;
-  }
-  .sobrenosotros-text {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-container-text {
-    width: 100%;
-    padding-right: 90px;
-    margin: 0;
-  }
-  /* Section Sobre Nosotros */
-
-  .section-sobrenosotros{
-    width: 100%;
-    padding-right: 20px;
-  }
-  .sobrenosotros-title {
-    font-size: 1.3rem;
-  }
-
-  .sobrenosotros-text {
-    font-size: 0.9rem;
   }
 }

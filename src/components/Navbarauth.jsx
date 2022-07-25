@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbarauth.css";
 
 const Navbarauth = () => {
   const [btnState, setBtnState] = useState(false);
