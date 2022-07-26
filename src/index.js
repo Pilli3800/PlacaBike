@@ -1,20 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
+import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import Layout from "./Layout";
-import Footer from "./components/Footer";
+import Footer from "./ui/components/footer/Footer";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
     <BrowserRouter>
-     <Layout/>
-     <Footer/>
-    </BrowserRouter>,
-  document.getElementById("root")
+      <App />
+      <Footer />
+    </BrowserRouter>
+  </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

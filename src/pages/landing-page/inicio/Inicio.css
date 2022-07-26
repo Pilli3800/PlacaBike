@@ -1,0 +1,198 @@
+/* Section Hero */
+.section-hero {
+  background-color: var(--color-primary);
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.hero-container-text {
+  color: white;
+  text-align: center;
+  width: 30%;
+  margin-right: 100px;
+  animation: fadeIn-Left 1.5s;
+}
+
+.hero-container-text h1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero-container-text p {
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.whiteSpan {
+  color: white;
+  font-weight: bold;
+}
+
+.darkSpan {
+  color: var(--color-focus);
+  font-weight: bold;
+}
+
+.hero-container-img {
+  display: flex;
+  justify-content: center;
+}
+
+.bicycle {
+  animation: fadeIn-Right 1.5s;
+}
+
+/* Section Cards */
+
+.section-cards {
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("../../../resources/img/chains.png");
+  background-color: #f9f9f9;
+  background-repeat: no-repeat;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-left: 10%;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  background: rgb(255, 255, 255);
+  border-radius: 0.4em;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: rgb(250, 250, 250) 0.2em solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 8px 50px #23232333;
+  transition: 0.5s ease;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.5s ease;
+  padding: 20px;
+}
+
+.card-container:hover {
+  /* transform: scale(1.1); */
+  overflow: hidden;
+}
+
+.card-img {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+
+/* Animaciones */
+
+@keyframes fadeIn-Right {
+  0% {
+    opacity: 0;
+    transform: translateX(180px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn-Left {
+  0% {
+    opacity: 0;
+    transform: translateX(-180px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  /* Section Cards */
+.cards-container{
+  margin-left: 0;
+}
+}
+
+@media (max-width: 992px) {
+  /* Section Hero */
+  .section-hero {
+    height: auto;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-container-text {
+    width: 100%;
+    padding: 0 70px;
+    margin: 0;
+  }
+
+  .hero-container-img {
+    width: 100%;
+  }
+
+  .bicycle {
+    width: 50%;
+  }
+  /* Section Cards */
+  .section-cards {
+    height: auto;
+    flex-direction: column;
+    padding: 40px 0;
+    background-image: none;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Section Hero */
+  .hero-container-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-container-text p {
+    line-height: 23px;
+    font-size: 14px;
+  }
+}
