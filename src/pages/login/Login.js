@@ -1,21 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import AOS from "aos";
 import { Link, useNavigate } from "react-router-dom";
-import { getDataFromApi } from "../../services/Api";
+import { BarLoader } from "react-spinners";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../services/firebase";
+import Swal from "sweetalert2";
 
 const Login = () => {
   AOS.init();
+
+  const [loading, setLoading] = useState(false);
+  const override = {
+    display: "block",
+    margin: "45.6vh auto",
+  };
+
   let navigate = useNavigate();
 
-  const [data, setData] = useState({
+  /* const [data, setData] = useState({
     username: "",
     password: "",
   });
 
-  /*const { username, password } = data;
+  const { username, password } = data;
   let obj = false;
   const changeHandler = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -26,22 +34,48 @@ const Login = () => {
     const auth = getAuth(app);
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user);
-        navigate(`/user/${user.email}`);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+
+    if (email === "" || password === "") {
+      Swal.fire({
+        title: "Campos Vacíos",
+        text: "Tiene que llenar sus datos para ingresar.",
+        icon: "error",
       });
+    } else {
+      setLoading(true);
+      console.log(email, password);
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+          setLoading(false);
+          navigate(`/user/${user.email}`);
+        })
+        .catch((error) => {
+          setLoading(false);
+          navigate(`/login`);
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+          console.log(errorCode, typeof errorMessage);
+          Swal.fire({
+            title: "Error al ingresar",
+            text: errorMessage,
+            icon: "error",
+          });
+        });
+    }
     // console.log(data);
     // localStorage.setItem("user", JSON.stringify(data));
     // obj = users.find((element) => element.name === data.username);
     // console.log(obj);
   };
+
+  if (loading) {
+    return (
+      <BarLoader speed={1} loading={loading} cssOverride={override} size={50} />
+    );
+  }
 
   return (
     <div className="login-container">
@@ -52,9 +86,9 @@ const Login = () => {
         <form className="login-form" onSubmit={submitHandler}>
           <input
             className="login-input"
-            type="text"
+            type="email"
             name="username"
-            placeholder="Ingrese su DNI"
+            placeholder="Ingrese su correo electrónico"
             id="email"
             // value={username}
             // onChange={changeHandler}

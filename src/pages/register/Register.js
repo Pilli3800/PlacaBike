@@ -26,6 +26,8 @@ const Register = () => {
     e.preventDefault();
     const auth = getAuth(app);
     const email = e.target.email.value;
+    const nombres = e.target.nombres.value;
+    const apellidos = e.target.apellidos.value;
     const password = e.target.password.value;
     const dni = e.target.dni.value;
     createUserWithEmailAndPassword(auth, email, password)
@@ -37,8 +39,10 @@ const Register = () => {
             "https://placabike-5f044-default-rtdb.firebaseio.com/usuarios.json",
             {
               email: email,
+              nombres: nombres,
+              apellidos: apellidos,
               password: password,
-              dni: dni,
+              dni: dni
             }
           )
           .then(function (response) {
@@ -72,7 +76,7 @@ const Register = () => {
         });
         // ..
       });
-    console.log(email, password, dni);
+    console.log(email, nombres, apellidos, password, dni);
   };
 
   return (
@@ -93,6 +97,36 @@ const Register = () => {
           />
           <br />
           <input
+            onKeyPress={(event) => {
+              if (/[0-9]/.test(event.key)) {
+                event.preventDefault();
+              }
+            }}
+            className="register-input"
+            type="text"
+            name="nombres"
+            id="nombres"
+            placeholder="Ingrese sus nombres"
+            // value={email}
+            // onChange={changeHandler}
+          />
+          <br />
+          <input
+            onKeyPress={(event) => {
+              if (/[0-9]/.test(event.key)) {
+                event.preventDefault();
+              }
+            }}
+            className="register-input"
+            type="text"
+            name="apellidos"
+            id="apellidos"
+            placeholder="Ingrese sus apellidos"
+            // value={email}
+            // onChange={changeHandler}
+          />
+          <br />
+          <input
             className="register-input"
             type="password"
             name="password"
@@ -103,11 +137,17 @@ const Register = () => {
           />
           <br />
           <input
+            onKeyPress={(event) => {
+              if (!/[0-9]/.test(event.key)) {
+                event.preventDefault();
+              }
+            }}
             className="register-input"
             type="text"
             name="dni"
             placeholder="Ingrese su DNI"
             id="dni"
+            maxLength="8"
             // defaultValue={dni}
             // onChange={changeHandler}
           />

@@ -4,28 +4,35 @@ import AOS from "aos";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
 const Recovery = () => {
   AOS.init();
 
   const [data, setData] = useState({
-    email: ""
+    email: "",
   });
 
   const { email } = data;
 
   const changeHandler = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value});
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(data);
-    Swal.fire({
-      title: "¡Recuperación exitosa!",
-      text: "Se le envio un mensaje a su correo electrónico con los detalles para la recuperación.",
-      icon: "success",
-    });
+    if (data.email === "") {
+      Swal.fire({
+        title: "¡Campos Vacíos!",
+        text: "Debe ingresar un correo electrónico para continuar con la recuperación.",
+        icon: "error",
+      });
+    } else {
+      console.log(data);
+      Swal.fire({
+        title: "¡Recuperación exitosa!",
+        text: "Se le envio un mensaje a su correo electrónico con los detalles para la recuperación.",
+        icon: "success",
+      });
+    }
   };
 
   return (
@@ -37,18 +44,25 @@ const Recovery = () => {
         <form className="login-form" onSubmit={submitHandler}>
           <input
             className="login-input"
-            type="text"
+            type="email"
             name="email"
             placeholder="Ingrese su correo electrónico"
             value={email}
             onChange={changeHandler}
           />
           <br />
-          <input type="submit" className="login-submit" name="submit" value="Recuperar" />
+          <input
+            type="submit"
+            className="login-submit"
+            name="submit"
+            value="Recuperar"
+          />
         </form>
         <div className="register-form-helper">
           <span className="spanHelperDark">
-            <Link className="link" to="/login">Atrás</Link>
+            <Link className="link" to="/login">
+              Atrás
+            </Link>
           </span>
         </div>
       </div>

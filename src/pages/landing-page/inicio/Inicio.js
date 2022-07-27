@@ -31,7 +31,7 @@ const Inicio = () => {
         <div></div>
       </section>
       <section className="section-cards">
-        <div className="cards-container">
+        <div className="cards-container" data-aos="fade-up">
           <div className="card">
             <div className="card-container">
               <img className="card-img" src={register} alt="registrate"></img>
