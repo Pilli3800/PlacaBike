@@ -36,7 +36,7 @@ const Register = () => {
         const user = userCredential.user;
         axios
           .post(
-            "https://placabike-5f044-default-rtdb.firebaseio.com/usuarios.json",
+            `https://placabike-5f044-default-rtdb.firebaseio.com/usuarios/${dni}.json`,
             {
               email: email,
               nombres: nombres,
