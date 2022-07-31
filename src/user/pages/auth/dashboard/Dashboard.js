@@ -12,25 +12,6 @@ const Dashboard = () => {
   return (
     <Container>
       <div className="dashboard-container">
-        <PopupState variant="popover" popupId="demo-popup-menu">
-          {(popupState) => (
-            <React.Fragment>
-              <Button variant="contained" {...bindTrigger(popupState)}>
-                Menú
-              </Button>
-              <Menu {...bindMenu(popupState)}>
-                <Link to="perfil" className="link">
-                  <MenuItem onClick={popupState.close}>Mi Cuenta</MenuItem>
-                </Link>
-                <Link to='bicicletas' className="link">
-                  <MenuItem onClick={popupState.close}>Mis Bicicletas</MenuItem>
-                </Link>
-                <Link to="/" className="link"><MenuItem onClick={popupState.close}>Cerrar Sesión</MenuItem>
-                </Link>
-              </Menu>
-            </React.Fragment>
-          )}
-        </PopupState>
         <h3>Bienvenido: {username}</h3>
         <Outlet />
       </div>
