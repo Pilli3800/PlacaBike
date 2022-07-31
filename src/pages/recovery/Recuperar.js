@@ -3,10 +3,11 @@ import "./Recovery.css";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
 const Recovery = () => {
   AOS.init();
-
+  const auth = getAuth();
   const [data, setData] = useState({
     email: "",
   });
@@ -27,11 +28,23 @@ const Recovery = () => {
       });
     } else {
       console.log(data);
-      Swal.fire({
-        title: "¡Recuperación exitosa!",
-        text: "Se le envio un mensaje a su correo electrónico con los detalles para la recuperación.",
-        icon: "success",
-      });
+      sendPasswordResetEmail(auth, email)
+        .then(() => {
+          Swal.fire({
+            title: "¡Recuperación exitosa!",
+            text: "Se le envio un mensaje a su correo electrónico con los detalles para la recuperación.",
+            icon: "success",
+          });
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          Swal.fire({
+            title: "Error",
+            text: "Hubo un problema con su correo ", errorMessage,
+            icon: "error",
+          });
+        });
     }
   };
 
