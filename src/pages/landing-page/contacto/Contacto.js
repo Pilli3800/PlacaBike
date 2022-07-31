@@ -7,24 +7,32 @@ import Swal from "sweetalert2";
 const Contacto = () => {
   AOS.init();
   const [data, setData] = useState({
-    email: " ",
-    message: " ",
+    email: "",
+    message: "",
   });
 
   const { email, message } = data;
 
   const changeHandler = (e) => {
-    setData({ ...data, [e.target.name]: [e.target.value] });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(data);
-    Swal.fire({
-      title: "¡Enviado con éxito!",
-      text: "Nuestro equipo se pondrá en contacto con usted lo más pronto posible.",
-      icon: "success",
-    });
+    if (data.email === "" || data.message === "") {
+      Swal.fire({
+        title: "¡Campos Vacíos!",
+        text: "Debe ingresar un correo electrónico y un mensaje.",
+        icon: "error",
+      });
+    } else {
+      console.log(data);
+      Swal.fire({
+        title: "¡Enviado con éxito!",
+        text: "Nuestro equipo se pondrá en contacto con usted lo más pronto posible.",
+        icon: "success",
+      });
+    }
   };
 
   return (
