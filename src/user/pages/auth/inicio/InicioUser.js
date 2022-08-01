@@ -13,14 +13,14 @@ const InicioUser = () => {
               <p>{userData.name}</p>
             </div>
             <div className="inicio-user-card-container">
-              <div className="card">
+              <div className="card-inicio-user">
                 <div className="user-card-container">
                   <p className="darkSpan">Tiene: </p>
                   <p className="strongSpan">2</p>
                   <p>bicicletas registradas</p>
                 </div>
               </div>
-              <div className="card">
+              <div className="card-inicio-user">
                 <div className="user-card-container">
                   <p className="darkSpan">Tiene: </p>
                   <p className="strongSpan">1</p>
