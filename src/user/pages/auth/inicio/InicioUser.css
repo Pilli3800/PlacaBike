@@ -1,0 +1,33 @@
+.inicio-user-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inicio-user-bienvenido {
+  text-align: center;
+}
+
+.inicio-user-bienvenido p {
+  margin: 0.5rem;
+}
+
+.inicio-user-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.card {
+  width: 70%;
+  height: 200px;
+}
+
+.strongSpan {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}

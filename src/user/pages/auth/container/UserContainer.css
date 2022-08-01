@@ -2,3 +2,15 @@
   height: 93vh;
   padding: 30px;
 }
+
+@media (max-width: 992px) {
+  .UserContainer-container {
+    height: 93vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .UserContainer-container {
+    height: auto;
+  }
+}
