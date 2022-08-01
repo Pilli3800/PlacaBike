@@ -13,6 +13,10 @@ const Navbarauth = () => {
     name: JSON.parse(localStorage.getItem("user")),
   };
 
+  const handleClickRemoveLocalStorage = () => {
+    localStorage.removeItem("user");
+  };
+
   let toggleClassCheck = btnState ? "nav-menu_visible" : "";
   return (
     <UserContext.Provider value={userData}>
@@ -59,7 +63,7 @@ const Navbarauth = () => {
             <li className="nav-menu-item">
               <Link
                 to="/"
-                onClick={handleClick}
+                onClick={handleClickRemoveLocalStorage}
                 className="nav-menu-link nav-link nav-menu-link_active"
               >
                 Salir
