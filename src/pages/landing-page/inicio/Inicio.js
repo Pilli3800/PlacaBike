@@ -19,9 +19,8 @@ const Inicio = () => {
               tu <span className="darkSpan">BIKE</span>
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              venenatis, quam et sodales pharetra, dolor ante blandit neque, eu
-              finibus dolor velit at quam.{" "}
+              Una iniciativa de ciclistas arequipeños para toda la ciudad de
+              Arequipa. Comprometidos con el cambio y la mejora tecnológica de nuestra sociedad.{" "}
             </p>
           </div>
           <div className="hero-container-img">

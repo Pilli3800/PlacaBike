@@ -16,18 +16,34 @@ const Sobrenosotros = () => {
           </h2>
         </div>
       </section>
-      <section className="sobrenosotros-section section2">
+      <section className="sobrenosotros-section section2" data-aos="fade-down">
         <div>
           <p className="textSection">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit eros,
-            pharetra mattis quisque lacus viverra mauris magnis natoque, semper
-            etiam morbi diam venenatis auctor lacinia. Habitant in cras rhoncus
-            ultricies felis, ut massa iaculis pretium, eros lacinia laoreet dis.
+            Debido a la pandemia acontecida en el año 2020, la{" "}
+            <strong>bicicleta</strong> se volvió la alternativa de transporte
+            más usada del Perú. Sin embargo, eso significó que los índices de{" "}
+            <strong>robos</strong> de bicicletas aumentó.
+          </p>
+          <br></br>
+          <p className="textSection">
+            En ese momento nace, Placa Bike. Una iniciativa social de jóvenes
+            arequipeños, que buscan promover la formalidad del sector ciclismo
+            buscando proteger nuestros bienes, nuestras bicicletas. Y
+            obviamente, cuidar el medio ambiente impulsando el uso de la
+            bicicleta.{" "}
+          </p>
+          <br></br>
+          <p className="textSection">
+            En nuestra plataforma, podrás generar una{" "}
+            <strong>tarjeta de propiedad</strong> y una
+            <strong> placa</strong> para cada una de tus bicicletas. Claro esto
+            no tiene valor legal, pero si ayudará a certificar que es tuya,
+            mediante tu boleta o código de serie.{" "}
           </p>
         </div>
       </section>
-      <section className="sobrenosotros-section section3">
-        <p className="titleCards">¿Que buscamos?</p>
+      <section className="sobrenosotros-section section3" data-aos="fade-down">
+        <p className="titleCards">¿Qué buscamos?</p>
         <div className="cards">
           <div className="card">
             <img className="card-img" src={documentos} alt="documentos"></img>
@@ -37,7 +53,7 @@ const Sobrenosotros = () => {
             </p>
           </div>
           <div className="card">
-            <img className="card-img" src={policia} alt="policia" ></img>
+            <img className="card-img" src={policia} alt="policia"></img>
             <p>
               <strong>Proteger</strong> los bienes como lo son la bicicletas de
               robos y fraudes.
