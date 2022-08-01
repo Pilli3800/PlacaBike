@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Perfil from "../pages/auth/perfil/Perfil";
 import Dashboard from "../pages/auth/dashboard/Dashboard";
 import Bicicletas from "../pages/auth/bicicletas/Bicicletas";
-import UserContext from "../../context/UserContext"
+import UserContext from "../../context/UserContext";
 
 const UserRoutes = () => {
   const userData = {
