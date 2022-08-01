@@ -8,6 +8,7 @@ import Recovery from "../pages/recovery/Recuperar";
 import Register from "../pages/register/Register";
 import Navbar from "../ui/components/navbar/Navbar";
 import UserRoutes from "../user/routes/UserRoutes";
+import PrivateRoutes from "./PrivateRoutes";
 
 const AppRouter = () => {
   return (
@@ -20,7 +21,9 @@ const AppRouter = () => {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="recuperar" element={<Recovery />} />
-        <Route path="user/*" element={<UserRoutes />} />
+        <Route element={<PrivateRoutes/>}>
+          <Route path="user/*" element={<UserRoutes />} />
+        </Route>
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </>

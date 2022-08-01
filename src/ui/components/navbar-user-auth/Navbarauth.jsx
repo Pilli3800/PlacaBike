@@ -22,7 +22,7 @@ const Navbarauth = () => {
     <UserContext.Provider value={userData}>
       <header className="header">
         <nav className="nav">
-          <Link to={userData.name} className="logo nav-link">
+          <Link to={`${userData.name}/inicio`} className="logo nav-link">
             Placa <span>Bike</span>{" "}
           </Link>
           <button
@@ -35,7 +35,7 @@ const Navbarauth = () => {
           <ul className={`nav-menu ${toggleClassCheck}`}>
             <li className="nav-menu-item">
               <Link
-                to={userData.name}
+                to={`${userData.name}/inicio`}
                 onClick={handleClick}
                 className="nav-menu-link nav-link"
               >

@@ -50,7 +50,7 @@ const Login = () => {
           console.log(user);
           localStorage.setItem("user", JSON.stringify(email));
           setLoading(false);
-          navigate(`/user/${user.email}`);
+          navigate(`/user/${user.email}/inicio`);
         })
         .catch((error) => {
           setLoading(false);

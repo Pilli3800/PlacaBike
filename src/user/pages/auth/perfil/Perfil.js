@@ -1,12 +1,22 @@
-import React from 'react'
-import { Avatar } from '@mui/material'
+import React from "react";
+import { Avatar } from "@mui/material";
 import "./Perfil.css";
+import UserContext from "../../../../contexts/UserContext";
 
 const Perfil = () => {
   return (
-    <div className='hola'>Perfil<Avatar>{}</Avatar>
-    <p>Detalles del Perfil</p></div>
-  )
-}
+    <UserContext.Consumer>
+      {(userData) => {
+        return (
+          <div>
+            Perfil
+            <Avatar>{userData.name.toString().charAt(0).toUpperCase()}</Avatar>
+            <p>Detalles del Perfil</p>
+          </div>
+        );
+      }}
+    </UserContext.Consumer>
+  );
+};
 
-export default Perfil
+export default Perfil;
