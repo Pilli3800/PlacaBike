@@ -4,7 +4,8 @@ import "./Perfil.css";
 
 const Perfil = () => {
   return (
-    <div className='hola'>Perfil<Avatar>{}</Avatar></div>
+    <div className='hola'>Perfil<Avatar>{}</Avatar>
+    <p>Detalles del Perfil</p></div>
   )
 }
 
