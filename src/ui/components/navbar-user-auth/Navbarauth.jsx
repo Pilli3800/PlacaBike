@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbarauth.css";
-import UserContext from "../../../context/UserContext";
+import UserContext from "../../../contexts/UserContext";
 
 const Navbarauth = () => {
   const [btnState, setBtnState] = useState(false);
